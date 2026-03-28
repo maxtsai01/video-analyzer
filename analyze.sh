@@ -41,17 +41,46 @@ fi
 
 mkdir -p "$OUTPUT_DIR"
 
+# 偵測 Cookie
+COOKIE_OPTS=""
+if [ -f "./cookies.txt" ]; then
+  COOKIE_OPTS="--cookies ./cookies.txt"
+  echo "🍪 偵測到 cookies.txt，使用登入狀態下載"
+elif [ -f "$OUTPUT_DIR/cookies.txt" ]; then
+  COOKIE_OPTS="--cookies $OUTPUT_DIR/cookies.txt"
+  echo "🍪 偵測到 cookies.txt，使用登入狀態下載"
+fi
+
+# B 站提醒
+if echo "$URL" | grep -q "bilibili"; then
+  if [ -z "$COOKIE_OPTS" ]; then
+    echo ""
+    echo "⚠️  B 站需要登入才能下載！"
+    echo "   請先在瀏覽器登入 bilibili.com，然後："
+    echo "   方法 A: 安裝「Get cookies.txt」擴充套件匯出 Cookie"
+    echo "   方法 B: 把 cookies.txt 放在腳本同目錄"
+    echo "   方法 C: 用 --browser chrome（如果 Chrome 已登入）"
+    echo ""
+    read -p "   已準備好 Cookie？(y/n) " -n 1 -r
+    echo
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+      echo "   請先準備 Cookie 再執行"
+      exit 1
+    fi
+  fi
+fi
+
 # Step 1: 下載影片
 echo ""
 echo "📥 Step 1: 下載影片..."
-TITLE=$(yt-dlp --get-title "$URL" 2>/dev/null | head -1)
+TITLE=$(yt-dlp $COOKIE_OPTS --get-title "$URL" 2>/dev/null | head -1)
 SAFE_TITLE=$(echo "$TITLE" | tr '/' '_' | tr ' ' '_' | cut -c1-50)
 VIDEO_FILE="$OUTPUT_DIR/${SAFE_TITLE}.mp4"
 
 if [ -f "$VIDEO_FILE" ]; then
   echo "   ✅ 已存在，跳過下載"
 else
-  yt-dlp -o "$VIDEO_FILE" "$URL" 2>&1 | grep -E "Destination|Merging|100%"
+  yt-dlp $COOKIE_OPTS -o "$VIDEO_FILE" "$URL" 2>&1 | grep -E "Destination|Merging|100%"
   echo "   ✅ 下載完成: $VIDEO_FILE"
 fi
 

@@ -15,6 +15,41 @@
 - ✅ 本地運行，影片不上傳到雲端
 - ✅ 一鍵搞定：下載 → 轉文字 → 輸出
 
+## ⚠️ 重要：平台登入需求
+
+| 平台 | 需要登入？ | Cookie 需求 |
+|------|-----------|------------|
+| YouTube | ❌ 不需要 | 直接下載 |
+| TikTok | ❌ 不需要 | 直接下載 |
+| Twitter/X | ❌ 不需要 | 直接下載 |
+| IG Reels | 🔶 部分需要 | 私人帳號需 Cookie |
+| **B 站** | **✅ 需要登入** | **必須提供 Cookie** |
+
+### B 站為什麼需要登入？
+
+B 站限制未登入用戶只能看低畫質，且部分影片完全無法存取。**你必須先在瀏覽器登入 B 站，再匯出 Cookie 給工具使用。**
+
+### B 站 Cookie 匯出方法
+
+**方法 A：從 Chrome/Edge/Firefox 自動抓**
+```bash
+# 如果你的 Chrome 已登入 B 站
+./analyze.sh https://www.bilibili.com/video/BVxxx zh --browser chrome
+```
+
+**方法 B：手動匯出 Cookie 檔案**
+1. 在已登入 B 站的瀏覽器安裝「Get cookies.txt」擴充套件
+2. 進入 bilibili.com → 點擊擴充套件 → 匯出為 `cookies.txt`
+3. 把 `cookies.txt` 放在腳本同目錄
+4. 腳本會自動偵測並使用
+
+**方法 C：透過 CDP 從 Comet/AdsPower 提取（進階）**
+```bash
+# 如果你用 Comet 瀏覽器（CDP port 9333）已登入 B 站
+./export-cookies.sh 9333 bilibili
+# 自動從瀏覽器提取 Cookie 並存成 cookies.txt
+```
+
 ## 🚀 快速開始
 
 ```bash
@@ -24,8 +59,11 @@ pip install mlx-whisper  # Mac (Apple Silicon)
 # 或
 pip install openai-whisper  # Windows/Linux/Intel Mac
 
-# 2. 執行
+# 2. 執行（YouTube/TikTok 直接跑）
 chmod +x analyze.sh
+./analyze.sh https://www.youtube.com/watch?v=xxx zh
+
+# 3. B 站需要先準備 Cookie（見上方說明）
 ./analyze.sh https://www.bilibili.com/video/BVxxx zh
 ```
 
