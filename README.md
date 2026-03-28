@@ -1,10 +1,16 @@
-# 🦞 AI Video Analyzer — 影片自動轉文字分析工具
+# 🦞 AI Video Analyzer — OpenClaw 影片分析模組
 
-### 🔥 一個指令，把任何影片變成可搜尋、可分析的文字
+### 🔥 安裝即用的 OpenClaw Skill — 讓你的 AI 助理自動分析任何影片
 
-> **「你的競爭對手在 YouTube 上講了什麼？你的同行在 B 站分享了什麼秘密？」**
+> **裝了 [OpenClaw](https://openclaw.ai)？直接跟龍蝦說：「幫我分析這支影片」。**
 > 
-> 以前你得花好幾個小時一支一支看完。現在，一個指令搞定。
+> 不用寫程式、不用裝一堆工具、不用手動串接。
+> **OpenClaw + 這個模組 = 你的 AI 自動幫你看影片、做筆記、整理重點。**
+
+```
+📦 安裝方式（一行搞定）：
+openclaw skills install video-analyzer
+```
 
 ---
 
@@ -106,26 +112,42 @@ yt-dlp 下載 → 手動轉檔 → 另一個工具轉文字 → 手動貼到 Cha
 
 ---
 
-## 🚀 3 步搞定
+## 🚀 兩種使用方式
 
-### Step 1：安裝（一次就好）
+### 方式 A：OpenClaw Skill（推薦 — 隨裝即用）
+
+已經有 OpenClaw（龍蝦）？一行安裝，直接對話使用：
+
 ```bash
+# 安裝
+openclaw skills install video-analyzer
+
+# 然後直接跟龍蝦說：
+# 「幫我分析這支 YouTube 影片 https://...」
+# 「把這個 B 站頻道最新 10 支影片轉成文字」
+# 「分析這支影片的重點，整理成 3 個要點」
+```
+
+**不需要記指令、不需要打參數。用自然語言就好。** 龍蝦會自動判斷要下載哪支影片、用什麼語言辨識、輸出什麼格式。
+
+### 方式 B：獨立腳本（不需要 OpenClaw）
+
+不想裝龍蝦？也可以直接用腳本：
+
+```bash
+# 安裝依賴
 brew install yt-dlp ffmpeg
 pip install mlx-whisper  # Mac Apple Silicon
 # 或 pip install openai-whisper  # Windows/Linux
-```
 
-### Step 2：分析單支影片
-```bash
+# 單支影片
 ./analyze.sh https://www.youtube.com/watch?v=xxx zh
-```
 
-### Step 3：批量分析整個頻道
-```bash
+# 批量分析整個頻道
 ./batch-analyze.sh --channel https://www.youtube.com/@channel --limit 20
 ```
 
-**就這樣。沒了。**
+**兩種方式都免費、都開源、都在你電腦上跑。**
 
 ---
 
@@ -218,18 +240,32 @@ A：Whisper large-v3 的中文辨識準確度約 95%+。專有名詞可能會有
 
 ---
 
-## 📢 這個工具是用 OpenClaw（🦞 龍蝦）自動化框架開發的
+## 📢 什麼是 OpenClaw（🦞 龍蝦）？
 
-[OpenClaw](https://openclaw.ai) 是一個開源 AI Agent 框架，可以自動化各種數位工作流程。
+[OpenClaw](https://openclaw.ai) 是一個開源 AI Agent 框架 — **你的 AI 私人助理，住在你的電腦裡。**
 
-這個 Video Analyzer 就是一個實際案例 — **AI 幫你看影片、幫你做筆記、幫你分析競品。**
+它可以：
+- 🗣️ 用自然語言控制你的電腦做事
+- 🔧 安裝各種 Skill（模組），擴充能力
+- 🤖 自動執行重複性工作
+- 🔒 完全本地運行，資料不外傳
 
-想知道 OpenClaw 還能做什麼？
-- 🐰 [自動社群互動](https://github.com/maxtsai01)
-- 🌈 [AI 測驗系統](https://github.com/maxtsai01/rainbow-life)
-- 🖼️ [AI 圖片處理](https://github.com/maxtsai01/ai-image-studio)
+**Video Analyzer 就是其中一個 Skill。** 裝上去，龍蝦就學會了「看影片」這個能力。
 
-**更多自動化工具持續開發中 → 追蹤 [@10000allison](https://www.instagram.com/10000allison/)**
+### 🦞 更多龍蝦 Skill（持續開發中）
+
+| Skill | 功能 | 狀態 |
+|-------|------|------|
+| 🎬 **video-analyzer** | 影片轉文字+分析 | ✅ 已發布 |
+| 🐰 **followbunny** | FB 社團自動互動 | ✅ 已完成 |
+| 🌈 **rainbow-life** | AI 性格測驗 | ✅ 已完成 |
+| 🖼️ **ai-image-studio** | AI 圖片處理 | ✅ 已完成 |
+| 📱 **fb-auto-register** | FB 自動註冊 | 🔜 開發中 |
+| 📊 **fb-brand-matrix** | FB 品牌矩陣經營 | 🔜 開發中 |
+
+**每一個 Skill 都是獨立的、可安裝的模組。** 你需要什麼能力，就裝什麼 Skill。
+
+👉 追蹤 [@10000allison](https://www.instagram.com/10000allison/) 獲取最新模組更新
 
 ---
 
