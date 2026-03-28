@@ -114,17 +114,51 @@ done < urls.txt
 - 影片越長，轉文字越久（1 分鐘影片 ≈ 10-30 秒處理）
 - 本工具僅供學習研究用途
 
-## 💰 完整版
+## 🔧 進階工具
 
-Public 版本包含基本功能。
+### Cookie 自動提取（B 站必備）
 
-**完整版額外包含：**
-- 自動 AI 摘要（重點整理）
-- 批量頻道分析腳本
-- B 站 Cookie 自動提取
-- 多語言翻譯整合
+從已登入的 CDP 瀏覽器（Comet/Chrome）自動提取 Cookie：
 
-👉 私訊 [@10000allison](https://www.instagram.com/10000allison/) 取得完整版
+```bash
+# 從 Comet 瀏覽器提取 B 站 Cookie（CDP port 9333）
+./export-cookies.sh 9333 bilibili
+
+# 從 AdsPower 提取（CDP port 50325）
+./export-cookies.sh 50325 bilibili
+```
+
+提取後會自動存成 `cookies.txt`，之後 `analyze.sh` 會自動偵測使用。
+
+### 批量頻道分析
+
+一次分析整個頻道或多個影片：
+
+```bash
+# 分析 YouTube 頻道最新 20 支影片
+./batch-analyze.sh --channel https://www.youtube.com/@channel --limit 20
+
+# 從檔案讀取多個 URL
+./batch-analyze.sh --list urls.txt --lang zh
+
+# 自動產出摘要報告 → output/_summary.md
+```
+
+## 📁 完整檔案結構
+
+```
+video-analyzer/
+├── README.md              ← 說明文件
+├── analyze.sh             ← 單支影片分析
+├── batch-analyze.sh       ← 批量頻道分析
+├── export-cookies.sh      ← CDP Cookie 提取
+├── cookies.txt            ← (自動產生) B站登入Cookie
+└── output/                ← 分析結果
+    ├── 影片標題.mp4       ← 原始影片
+    ├── 影片標題.wav       ← 音頻
+    ├── 影片標題.txt       ← 完整字幕
+    └── _summary.md        ← 批量分析摘要報告
+```
 
 ---
 
