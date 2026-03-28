@@ -1,6 +1,6 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=0:FF6B6B,100:4ECDC4&height=200&section=header&text=🦞%20AI%20Video%20Analyzer&fontSize=36&fontColor=ffffff&desc=OpenClaw%20影片分析模組%20|%20Created%20by%20Allison&descSize=16&descAlignY=75)
+![header](https://capsule-render.vercel.app/api?type=waving&color=0:FF6B6B,100:4ECDC4&height=200&section=header&text=🦞%20Lobster%20Video%20Intelligence&fontSize=32&fontColor=ffffff&desc=AI-Powered%20Video%20Analysis%20Engine%20|%20by%20Allison%20@%20CTMaxs&descSize=14&descAlignY=75)
 
-# 🦞 AI Video Analyzer — OpenClaw 影片分析模組
+# 🦞 Lobster Video Intelligence — AI 影片情報分析引擎
 
 ### 🔥 安裝即用的 OpenClaw Skill — 讓你的 AI 助理自動分析任何影片
 
