@@ -1,3 +1,5 @@
+![header](https://capsule-render.vercel.app/api?type=waving&color=0:FF6B6B,100:4ECDC4&height=200&section=header&text=🦞%20AI%20Video%20Analyzer&fontSize=36&fontColor=ffffff&desc=OpenClaw%20影片分析模組%20|%20Created%20by%20Allison&descSize=16&descAlignY=75)
+
 # 🦞 AI Video Analyzer — OpenClaw 影片分析模組
 
 ### 🔥 安裝即用的 OpenClaw Skill — 讓你的 AI 助理自動分析任何影片
