@@ -9,8 +9,10 @@
 
 ```
 📦 安裝方式（一行搞定）：
-openclaw skills install video-analyzer
+openclaw skills install video-analyzer --by Allison
 ```
+
+> 🧑‍💻 Created by **Allison** (@10000allison) | CTMaxs 龍蝦自動化團隊
 
 ---
 
@@ -276,5 +278,9 @@ A：Whisper large-v3 的中文辨識準確度約 95%+。專有名詞可能會有
 - 有問題開 Issue
 
 ---
+
+---
+
+**Created by [Allison](https://www.instagram.com/10000allison/) | [CTMaxs](https://ctmaxs.com) 龍蝦自動化團隊**
 
 *Built with 🦞 [OpenClaw](https://openclaw.ai) + 🗣️ [Whisper](https://github.com/openai/whisper) + 📹 [yt-dlp](https://github.com/yt-dlp/yt-dlp)*
