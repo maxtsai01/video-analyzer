@@ -289,22 +289,39 @@ A：Whisper large-v3 的中文辨識準確度約 95%+。專有名詞可能會有
 
 ---
 
+---
+
 ## 🦞 龍蝦模組商店 Lobster Store
 
-**💎 $100 USD/月 — 全部模組通用，訂閱即開通**
+**💎 $100 USD/月 — 全部模組通用，訂閱送安裝**
 
-| Skill | 功能 |
-|-------|------|
-| 🎬 **[video-analyzer](https://github.com/maxtsai01/video-analyzer)** | AI 影片情報分析引擎 |
-| 🤝 **[lobster-manus](https://github.com/maxtsai01/lobster-manus)** | AI 雙引擎協作（龍蝦×Manus） |
-| 🛒 **[lobster-1shop](https://github.com/maxtsai01/lobster-1shop)** | 1Shop 電商自動化 |
-| 🎯 **[lobster-adspower](https://github.com/maxtsai01/lobster-adspower)** | AdsPower 多帳號自動化 |
-| 🤖 **[agent-orchestrator](https://github.com/maxtsai01/agent-orchestrator)** | 多代理協作引擎 |
-| 📱 **[fb-auto-register](https://github.com/maxtsai01/fb-auto-register)** | AdsPower FB 自動註冊 |
-| 🐰 **[followbunny](https://github.com/maxtsai01/followbunny-public)** | FB 社團自動互動 |
-| 🌈 **[rainbow-life](https://github.com/maxtsai01/rainbow-life)** | AI 彩虹人生性格測驗 |
-| 🖼️ **[ai-image-studio](https://github.com/maxtsai01/ai-image-studio)** | AI 智能圖片處理 |
-| 🦞 **[lobster-ai-warbook](https://github.com/maxtsai01/lobster-ai-warbook)** | 龍蝦兵法訓練手冊 |
+### 🔵 養號變現系列 — 從 0 到有客戶
+| 模組 | 解決什麼問題 |
+|------|------------|
+| 📱 [fb-auto-register](https://github.com/maxtsai01/fb-auto-register) | 55 秒自動註冊 FB 帳號 |
+| 🐰 [followbunny](https://github.com/maxtsai01/followbunny-public) | FB 社團自動按讚+留言+開發 |
+| 🎯 [lobster-adspower](https://github.com/maxtsai01/lobster-adspower) | 多帳號管理+養號+防封 |
+
+### 🟢 內容變現系列 — 自動產內容
+| 模組 | 解決什麼問題 |
+|------|------------|
+| 🎬 [video-analyzer](https://github.com/maxtsai01/video-analyzer) | 丟連結→自動分析競品影片 |
+| 🖼️ [ai-image-studio](https://github.com/maxtsai01/ai-image-studio) | 去浮水印+提升畫質+文字替換 |
+| 🤝 [lobster-manus](https://github.com/maxtsai01/lobster-manus) | AI 雙引擎自動產文案+素材 |
+
+### 🟡 電商變現系列 — 自動賣東西
+| 模組 | 解決什麼問題 |
+|------|------------|
+| 🛒 [lobster-1shop](https://github.com/maxtsai01/lobster-1shop) | 1Shop 電商後台自動化 |
+| 💬 [lobster-line-automation](https://github.com/maxtsai01/lobster-line-automation) | LINE@ 客服+推播自動化 |
+
+### 🔴 龍蝦訓練系列 — 讓你的 AI 更強
+| 模組 | 解決什麼問題 |
+|------|------------|
+| 🦞 [lobster-ai-warbook](https://github.com/maxtsai01/lobster-ai-warbook) | 龍蝦兵法：踩雷紀錄+解法 |
+| 🤖 [agent-orchestrator](https://github.com/maxtsai01/agent-orchestrator) | 多龍蝦同時協作 |
+| 🌈 [rainbow-life](https://github.com/maxtsai01/rainbow-life) | 人格定位系統 |
+| 🔧 [lobster-install](https://github.com/maxtsai01/lobster-install) | 安裝 SOP + 服務條款 |
 
 > 📸 私訊 [@10000allison](https://www.instagram.com/10000allison/) 訂閱 → 付款 → 全部模組即刻開通
 
