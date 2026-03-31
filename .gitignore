@@ -1,0 +1,10 @@
+# 敏感檔案
+*.env
+auth-profiles.json
+openclaw.json
+memory/
+/tmp/
+
+# OS
+.DS_Store
+Thumbs.db
